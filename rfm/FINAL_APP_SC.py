@@ -1,3 +1,16 @@
+import subprocess
+
+try:
+    import matplotlib
+    print("✅ matplotlib version:", matplotlib.__version__)
+except ImportError:
+    print("❌ matplotlib not found")
+
+# List all installed packages in logs
+subprocess.run(["pip", "list"])
+
+
+
 import streamlit as st
 import pandas as pd
 import matplotlib
